@@ -29,9 +29,9 @@
         .project-description { font-size: 0.95rem; color: #4a4a4a; }
         .project-description p { margin-bottom: 1.8rem; }
         
-        /* --- Standardized 4-Image Gallery Grid --- */
+        /* --- Standardized 2x2 Gallery Grid --- */
         .project-gallery-section { margin-top: 2rem; border-top: 1px solid #f5f5f5; padding-top: 4rem; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 4rem; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 4rem; }
         .gallery-item-wrapper { width: 100%; background-color: #ffffff; border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.01); }
         .gallery-img { width: 100%; height: auto; object-fit: contain; display: block; }
         
@@ -47,7 +47,7 @@
             .project-split-layout { grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3rem; } 
             .project-title { font-size: 2rem; } 
             .project-cover-image { max-height: 50vh; } 
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; } 
+            .gallery-grid { gap: 1.5rem; } 
         }
         @media (max-width: 600px) { 
             header { padding: 1.2rem 5%; } 
@@ -82,7 +82,7 @@
             </div>
         </div>
 
-        <!-- Standardized Bottom Project Gallery Section (4 Pieces) -->
+        <!-- Standardized Bottom Project Gallery Section (2x2 Grid Layout) -->
         <section class="project-gallery-section">
             <div class="gallery-grid">
                 <div class="gallery-item-wrapper">
