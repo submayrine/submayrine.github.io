@@ -96,15 +96,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            max-width: 380px; 
         }
 
         .cover-side img {
             width: 100%;
-            max-width: 380px; /* Constrained elegant frame size */
             height: auto;
-            aspect-ratio: 1 / 1; /* Crisp square cover layout */
-            object-fit: cover;
-            border-radius: 16px;
+            /* CHANGED: 'contain' keeps the exact original aspect ratio without cropping */
+            object-fit: contain; 
+            border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
             border: 1px solid #f0f0f0;
         }
@@ -129,20 +130,23 @@
             font-weight: 400;
         }
 
-        /* --- Showcase Media Strip (Scroll Down Section) --- */
+        /* --- NEW: Showcase Media Strip (Side-by-Side Images) --- */
         .project-showcase {
             padding: 4rem 8%;
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 3rem; /* Dynamic layout spacing between project assets */
+            /* CHANGED: Switched to a two-column responsive grid layout */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem; 
         }
 
         .showcase-img {
             width: 100%;
             height: auto;
-            border-radius: 16px;
+            /* CHANGED: Set to contain/auto parameters so pages show completely */
+            object-fit: contain;
+            border-radius: 12px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
             border: 1px solid #f9f9f9;
             display: block;
@@ -193,6 +197,10 @@
             .cover-side img {
                 max-width: 300px;
             }
+            .project-showcase {
+                grid-template-columns: 1fr; /* Stack vertically on small screens */
+                gap: 1.5rem;
+            }
         }
 
         @media (max-width: 600px) {
@@ -220,9 +228,8 @@
     <!-- Top Screen Layout: Structured Split Block -->
     <section class="project-intro-container">
         
-        <!-- Left Column Layout: Project Square Cover -->
+        <!-- Left Column Layout: Project Cover -->
         <div class="cover-side">
-            <!-- Swap this with your actual layout thumbnail file -->
             <img src="silent-echoes-cover.jpg" alt="Silent Echoes Cover View">
         </div>
 
@@ -242,9 +249,9 @@
 
     </section>
 
-    <!-- Bottom Showcase Area: Visible when scrolling down -->
+    <!-- Bottom Showcase Area: Side-by-Side Scrolling Grid -->
     <section class="project-showcase">
-        <!-- Input files or visual assets related to the project sequentially -->
+        <!-- Your original illustrations will sit cleanly side by side here -->
         <img src="comic-page1.jpg" alt="Silent Echoes Showcase Slide 1" class="showcase-img">
         <img src="comic-page2.jpg" alt="Silent Echoes Showcase Slide 2" class="showcase-img">
         <img src="comic-page3.jpg" alt="Silent Echoes Showcase Slide 3" class="showcase-img">
