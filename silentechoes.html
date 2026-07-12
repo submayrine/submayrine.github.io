@@ -131,14 +131,14 @@
         }
 
         /* --- NEW: Showcase Media Strip (Side-by-Side Images) --- */
-        .project-showcase {
-            padding: 4rem 8%;
-            max-width: 1200px;
-            margin: 0 auto;
-            /* CHANGED: Switched to a two-column responsive grid layout */
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem; 
+        /* --- Updated: Force 3 Images Side-by-Side --- */
+.project-showcase {
+    padding: 4rem 8%;
+    max-width: 1400px; /* Widened slightly so 3 images have plenty of breathing room */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 equal columns */
+    gap: 1.5rem; /* Clean, even spacing between your panels */
         }
 
         .showcase-img {
