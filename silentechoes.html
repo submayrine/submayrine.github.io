@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Echoes | Maeryne Entheran</title>
+    
+    <!-- IMPORT MONTSERRAT FROM GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #ffffff; 
+            color: #2b2b2b; 
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        /* --- Navigation Header --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.90); 
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8%;
+            z-index: 1000;
+            border-bottom: 1px solid #f5f5f5; 
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px; 
+            color: #1a1a1a; 
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: #666666; 
+            letter-spacing: 1.5px;
+            text-transform: uppercase; 
+        }
+
+        nav ul li a:hover {
+            color: #ff6b8b; 
+        }
+
+        /* --- Split Structural Layout Container --- */
+        .project-intro-container {
+            display: flex;
+            min-height: 85vh;
+            padding-top: 80px; 
+            align-items: center;
+            justify-content: center;
+            padding-left: 8%;
+            padding-right: 8%;
+            gap: 4rem;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        /* Left Side: Project Cover Card Frame */
+        .cover-side {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cover-side img {
+            width: 100%;
+            max-width: 380px; /* Constrained elegant frame size */
+            height: auto;
+            aspect-ratio: 1 / 1; /* Crisp square cover layout */
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f0f0f0;
+        }
+
+        /* Right Side: Title & Description Text Content */
+        .content-side {
+            max-width: 550px;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description p {
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            color: #4a4a4a;
+            font-weight: 400;
+        }
+
+        /* --- Showcase Media Strip (Scroll Down Section) --- */
+        .project-showcase {
+            padding: 4rem 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem; /* Dynamic layout spacing between project assets */
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f9f9f9;
+            display: block;
+        }
+
+        /* --- Footer & Navigation Buttons --- */
+        .back-nav-container {
+            padding: 4rem 8%;
+            text-align: center;
+        }
+
+        .back-btn {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            border-bottom: 2px solid #ff6b8b;
+            padding-bottom: 4px;
+        }
+
+        .back-btn:hover {
+            color: #ff6b8b;
+        }
+
+        footer {
+            background-color: #fff5f7; 
+            color: #1a1a1a; 
+            padding: 3rem 8%;
+            border-top: 1px solid #ffe3e8;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #666666;
+        }
+
+        /* --- Responsive Design viewports --- */
+        @media (max-width: 900px) {
+            .project-intro-container {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+                gap: 2rem;
+            }
+            .project-title {
+                font-size: 2rem;
+            }
+            .cover-side img {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 1.2rem 5%; }
+            .logo { font-size: 0.95rem; }
+            nav ul li { margin-left: 1.2rem; }
+            nav ul li a { font-size: 0.7rem; }
+            .project-intro-container, .project-showcase { padding-left: 5%; padding-right: 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Section -->
+    <header>
+        <div class="logo"><a href="index.html">MAERYNE ENTHERAN</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#work">Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Top Screen Layout: Structured Split Block -->
+    <section class="project-intro-container">
+        
+        <!-- Left Column Layout: Project Square Cover -->
+        <div class="cover-side">
+            <!-- Swap this with your actual layout thumbnail file -->
+            <img src="silent-echoes-cover.jpg" alt="Silent Echoes Cover View">
+        </div>
+
+        <!-- Right Column Layout: Copy Asset Content -->
+        <div class="content-side">
+            <h1 class="project-title">Silent Echoes</h1>
+            
+            <div class="project-description">
+                <p>
+                    Being passionate about animal welfare, I started looking into the topic and discovered that there was a connection between animal cruelty and serial killers due to the lack of empathy. Going along this research direction, I wanted to raise awareness on early indicators of potential dangerous psychopathy as well as to talk about the psychological effect on children after witnessing cruelty to animals and how they are more at risk of escalating the trauma.
+                </p>
+                <p>
+                    The end project is a short illustrated comic strip that tells the story of Haziq as he progresses through his cruel tendencies.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Bottom Showcase Area: Visible when scrolling down -->
+    <section class="project-showcase">
+        <!-- Input files or visual assets related to the project sequentially -->
+        <img src="comic-page1.jpg" alt="Silent Echoes Showcase Slide 1" class="showcase-img">
+        <img src="comic-page2.jpg" alt="Silent Echoes Showcase Slide 2" class="showcase-img">
+        <img src="comic-page3.jpg" alt="Silent Echoes Showcase Slide 3" class="showcase-img">
+    </section>
+
+    <!-- Footer System -->
+    <div class="back-nav-container">
+        <a href="index.html#work" class="back-btn">← Back to Selected Work</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Maeryne Entheran. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
