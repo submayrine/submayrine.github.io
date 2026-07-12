@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trap Neuter Release | Maeryne Entheran</title>
+    
+    <!-- IMPORT MONTSERRAT FROM GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <style>
+        /* --- Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #2b2b2b;
+            line-height: 1.8;
+            padding-top: 100px; /* Space for fixed header */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        /* --- Header Navigation --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.90);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8%;
+            z-index: 1000;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: #666666;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b8b;
+        }
+
+        /* --- Main Project Section --- */
+        .project-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Back Button Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff6b8b;
+            margin-bottom: 3rem;
+        }
+
+        .back-link:hover {
+            color: #1a1a1a;
+            transform: translateX(-4px);
+        }
+
+        /* Title Area */
+        .project-category {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ff6b8b;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+            margin-bottom: 3rem;
+        }
+
+        /* Description Content Copy Layout */
+        .project-description {
+            font-size: 1rem;
+            color: #4a4a4a;
+        }
+
+        .project-description p {
+            margin-bottom: 2rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #fff5f7;
+            color: #1a1a1a;
+            padding: 4rem 8%;
+            margin-top: 8rem;
+            border-top: 1px solid #ffe3e8;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-text p {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #666666;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header { padding: 1.2rem 5%; }
+            .logo { font-size: 0.95rem; }
+            nav ul li { margin-left: 1.2rem; }
+            nav ul li a { font-size: 0.7rem; }
+            .project-title { font-size: 2rem; }
+            footer { padding: 3rem 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header>
+        <div class="logo"><a href="index.html">MAERYNE ENTHERAN</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#work">Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Dynamic Frame -->
+    <main class="project-container">
+        
+        <!-- Navigation Back String Link -->
+        <a href="index.html#work" class="back-link">&#8592; Back to Work</a>
+
+        <!-- Headers -->
+        <div class="project-category">Educational Infographic</div>
+        <h1 class="project-title">Trap Neuter Release<br>(TNR)</h1>
+
+        <!-- Explanatory Typography Elements -->
+        <div class="project-description">
+            <p>
+                I chose one theme which was the stray animal dilemma in Malaysia and the topic that I chose in specific was TNR as a way to get a handle on strays in Malaysia.
+            </p>
+            <p>
+                I sent out a survey form with questions to find out the stray population/situation in their neighborhoods as well as how well they knew what TNR is or whether they had been exposed to this method before. I had also planned to use the data collected from the survey form to be included into my infographic piece.
+            </p>
+            <p>
+                In order to appeal to a younger audience I decided that I had to come up with a cartoonish cute mascot in order to catch their eyes. Through this project, I was able to learn how to create a mascot as well as how to use fonts and elements to create a piece that achieves the goal of appealing to a younger target audience.
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>&copy; 2026 Maeryne Entheran. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
