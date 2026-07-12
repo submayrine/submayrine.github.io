@@ -184,24 +184,25 @@
         }
 
         /* --- Responsive Design viewports --- */
-        @media (max-width: 900px) {
-            .project-intro-container {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 120px;
-                gap: 2rem;
-            }
-            .project-title {
-                font-size: 2rem;
-            }
-            .cover-side img {
-                max-width: 300px;
-            }
-            .project-showcase {
-                grid-template-columns: 1fr; /* Stack vertically on small screens */
-                gap: 1.5rem;
-            }
-        }
+       @media (max-width: 900px) {
+    .project-intro-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+        gap: 2rem;
+    }
+    .project-title {
+        font-size: 2rem;
+    }
+    .cover-side img {
+        max-width: 300px;
+    }
+    /* Smooth fallback: Stack them vertically only on smaller screens */
+    .project-showcase {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+}
 
         @media (max-width: 600px) {
             header { padding: 1.2rem 5%; }
